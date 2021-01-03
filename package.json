@@ -1,0 +1,22 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "note taking application using express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justinbush24/HW11.git"
+  },
+  "author": "Justin Bush",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Justinbush24/HW11/issues"
+  },
+  "homepage": "https://github.com/Justinbush24/HW11#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
