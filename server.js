@@ -1,7 +1,7 @@
-const express = require("express");
-const compression = require("compression");
-const apiRoutes = require("./routes/apiRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+const express = require('express');
+// // const compression = require("compression");
+// const apiRoutes = require("./routes/apiRoutes");
+// const htmlRoutes = require("./routes/htmlRoutes");
 
 // Initialize the app and create a port
 const app = express();
@@ -14,9 +14,14 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.static("public"));
-app.use(compression());
-app.use("/api", apiRoutes);
-app.use("/", htmlRoutes);
-
+// app.use(compression());
+// app.use("/api", apiRoutes);
+// app.use("/", htmlRoutes);
+app.get('/users', (req, res) => {
+    res.send('hello world')
+});
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'))
+});
 // Start the server on the port
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
